@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react'
 const App = () => {
 
     const [state, setState]=useState("");
-    const [skillarr, setSkillArr]=useState([]);
+    const [skillarr, setSkillArr]=useState(['cooking','painting','dance','singing','coding','reading']);
     const [id, setId]=useState("");
 
     const addSkill=useCallback(()=> {
@@ -39,7 +39,7 @@ const App = () => {
         <button id="skill-add-btn" onClick={addSkill}>Add Skill</button>
         <br />
         <ul id="skill-list">
-            {skillarr.map((skillitem,index)=> {return <li key={index} onClick={(e)=> {setId(e.target.id); deleteSkill(skillitem)}} id={`skill-number-${skillarr.length-1}`}>{skillitem}</li>})}
+            {skillarr.map((skillitem,index)=> {return <li key={index} onClick={(e)=> {setId(e.target.id); deleteSkill(skillitem)}} id={`skill-number-${index}`}>{skillitem}</li>})}
         </ul>
     </div>
   )
