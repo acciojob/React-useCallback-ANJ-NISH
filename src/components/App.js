@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react'
 const App = () => {
 
     const [state, setState]=useState("");
-    const [skillarr, setSkillArr]=useState(['cooking','painting','dance','singing','coding','reading']);
+    const [skillarr, setSkillArr]=useState(['HTML','CSS','JavaScript','React']);
     const [id, setId]=useState("");
 
     const addSkill=useCallback(()=> {
