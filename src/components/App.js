@@ -36,8 +36,8 @@ const App = () => {
         <input type="text" placeholder="Add the skill to be added in the list"  id="skill-input" value={state} onChange={(e)=> setState(e.target.value)}/>
         <button id="skill-add-btn" onClick={addSkill}>Add Skill</button>
         <br />
-        <ul>
-            {skillarr.map((skillitem,index)=> {return <li key={index} onClick={(e)=> {setId(e.target.id); deleteSkill(skillitem)}} id={`skill-number-${index+1}`}>{skillitem}</li>})}
+        <ul id="skill-list">
+            {skillarr.map((skillitem,index)=> {return <li key={index} onClick={(e)=> {setId(e.target.id); deleteSkill(skillitem)}} id={`skill-number-${index}`}>{skillitem}</li>})}
         </ul>
     </div>
   )
