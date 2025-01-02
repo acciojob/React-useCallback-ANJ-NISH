@@ -29,6 +29,8 @@ const App = () => {
      },[id,skillarr])
 
 
+
+
   return (
     <div>
         <h1 id="heading">Skill Assignment</h1>
@@ -37,7 +39,7 @@ const App = () => {
         <button id="skill-add-btn" onClick={addSkill}>Add Skill</button>
         <br />
         <ul id="skill-list">
-            {skillarr.map((skillitem,index)=> {return <li key={index} onClick={(e)=> {setId(e.target.id); deleteSkill(skillitem)}} id={`skill-number-${index}`}>{skillitem}</li>})}
+            {skillarr.map((skillitem,index)=> {return <li key={index} onClick={(e)=> {setId(e.target.id); deleteSkill(skillitem)}} id={`skill-number-${skillarr.length-1}`}>{skillitem}</li>})}
         </ul>
     </div>
   )
